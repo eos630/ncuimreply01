@@ -4,8 +4,7 @@ var express = require('express');
 var bot = linebot({
     channelID: '1543065394',
     channelSecret: '87cfa36f04eddf93e30c663391f91dd3',
-    channelAccessToken: 'AXs02TFl/f3JAwGiua2e1bcfhISBz4HNaS/3lm7MVaNbQFwdiomdQO7nC2XN0d7xfXnLdEpHR8ByXgFlIb19yz+VrKptcNECLO1ITsljSyZKsFUijmNh/WPhU/nnL17dOU4fEqruSPs4F4bEbrfAGAdB04t89/1O/w1cDnyilFU=
-'
+    channelAccessToken: 'AXs02TFl/f3JAwGiua2e1bcfhISBz4HNaS/3lm7MVaNbQFwdiomdQO7nC2XN0d7xfXnLdEpHR8ByXgFlIb19yz+VrKptcNECLO1ITsljSyZKsFUijmNh/WPhU/nnL17dOU4fEqruSPs4F4bEbrfAGAdB04t89/1O/w1cDnyilFU='
 });
 
 const app = express();
@@ -18,7 +17,7 @@ var server = app.listen(process.env.PORT || 8080, function() {  //heroku聽預�
   console.log("App now running on port", port);
 });
  
-bot.on('message', function (event) {
+bot.on('message', function(event) {
 	var userMsg = event.message.text; //取得使用者輸入的文字
     event.reply(userMsg).then(function (data) {  //機器人回覆同樣的話
         console.log('userMsg = ' + userMsg); 
